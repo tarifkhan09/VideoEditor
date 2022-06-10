@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trim View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TrimViewController" id="Y6W-OH-hqX" customClass="TrimViewController" customModule="VideoEditorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLV-Uf-ZqF">
+                                <rect key="frame" x="0.0" y="596" width="414" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LcD-lu-cAN">
+                                        <rect key="frame" x="20" y="225" width="374" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntS-nf-oTe">
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="33" id="JDH-Gu-OX5"/>
+                                                    <constraint firstAttribute="height" constant="33" id="yEa-AE-r7E"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="xmark" catalog="system"/>
+                                                <connections>
+                                                    <action selector="crossButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gVq-cd-wOe"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbz-1r-ID1">
+                                                <rect key="frame" x="170.5" y="0.0" width="33.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQb-Wc-DTB">
+                                                <rect key="frame" x="341" y="0.0" width="33" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="33" id="5I6-NF-mbc"/>
+                                                    <constraint firstAttribute="width" constant="33" id="mpc-4D-xL4"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="checkmark" catalog="system"/>
+                                                <connections>
+                                                    <action selector="cropDoneButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tvp-8J-hTC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="10D-vR-nln"/>
+                                    <constraint firstAttribute="trailing" secondItem="LcD-lu-cAN" secondAttribute="trailing" constant="20" id="KnO-ui-wW6"/>
+                                    <constraint firstItem="LcD-lu-cAN" firstAttribute="leading" secondItem="SLV-Uf-ZqF" secondAttribute="leading" constant="20" id="WCi-tO-BSC"/>
+                                    <constraint firstItem="LcD-lu-cAN" firstAttribute="centerX" secondItem="SLV-Uf-ZqF" secondAttribute="centerX" id="xA5-zP-rW9"/>
+                                    <constraint firstAttribute="bottom" secondItem="LcD-lu-cAN" secondAttribute="bottom" constant="42" id="xNT-p0-k5u"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SLV-Uf-ZqF" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="YBM-f6-1fO"/>
+                            <constraint firstAttribute="bottom" secondItem="SLV-Uf-ZqF" secondAttribute="bottom" id="uAx-kJ-2nQ"/>
+                            <constraint firstItem="SLV-Uf-ZqF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="w5e-xQ-Uge"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="SLV-Uf-ZqF" id="sOf-kO-9G8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

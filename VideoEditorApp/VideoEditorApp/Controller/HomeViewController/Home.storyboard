@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fRy-XW-gJ2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="nX4-Sf-SP3">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="fRy-XW-gJ2" customClass="HomeViewController" customModule="VideoEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cPX-cr-Jhv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Xw0-4i-CgR">
+                                <rect key="frame" x="361" y="59" width="33" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsh-A4-Cqy">
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="setting"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="HBw-5O-abq"/>
+                                    <constraint firstAttribute="width" constant="33" id="dA7-8z-6jX"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OnShort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mw8-NV-RTd">
+                                <rect key="frame" x="20" y="59" width="118.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.20000001789999999" green="0.20000001789999999" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAE-fH-aBh">
+                                <rect key="frame" x="107" y="368" width="200" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tL-13-O5x">
+                                        <rect key="frame" x="50" y="30" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="RjH-lU-Ozc"/>
+                                            <constraint firstAttribute="height" constant="100" id="Tdp-kP-qLX"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="pluse"/>
+                                        <connections>
+                                            <action selector="pluseButtonAction:" destination="fRy-XW-gJ2" eventType="touchUpInside" id="mHq-hh-zBg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8tL-13-O5x" firstAttribute="centerY" secondItem="fAE-fH-aBh" secondAttribute="centerY" id="9Ps-Zn-CEB"/>
+                                    <constraint firstAttribute="width" constant="200" id="D3z-L0-ktG"/>
+                                    <constraint firstAttribute="height" constant="160" id="XEC-Th-IS8"/>
+                                    <constraint firstItem="8tL-13-O5x" firstAttribute="centerX" secondItem="fAE-fH-aBh" secondAttribute="centerX" id="kQn-de-vzm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r2N-Yi-f3f"/>
+                        <color key="backgroundColor" red="0.89803922179999995" green="0.74117654560000001" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mw8-NV-RTd" firstAttribute="top" secondItem="r2N-Yi-f3f" secondAttribute="top" constant="15" id="8xN-Om-3s9"/>
+                            <constraint firstItem="r2N-Yi-f3f" firstAttribute="trailing" secondItem="Xw0-4i-CgR" secondAttribute="trailing" constant="20" id="dhn-z2-c4R"/>
+                            <constraint firstItem="fAE-fH-aBh" firstAttribute="centerX" secondItem="cPX-cr-Jhv" secondAttribute="centerX" id="dl8-qH-Rhp"/>
+                            <constraint firstItem="fAE-fH-aBh" firstAttribute="centerY" secondItem="cPX-cr-Jhv" secondAttribute="centerY" id="gq8-gy-pXM"/>
+                            <constraint firstItem="Xw0-4i-CgR" firstAttribute="top" secondItem="r2N-Yi-f3f" secondAttribute="top" constant="15" id="pUm-h3-HDc"/>
+                            <constraint firstItem="mw8-NV-RTd" firstAttribute="leading" secondItem="r2N-Yi-f3f" secondAttribute="leading" constant="20" id="rKO-vT-ARF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pluseBackgroundView" destination="fAE-fH-aBh" id="eem-WV-B2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hg-JX-UUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.22429906542056" y="83.585313174946009"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pluse" width="344" height="344"/>
+        <image name="setting" width="172" height="172"/>
+    </resources>
+</document>
